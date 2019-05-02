@@ -64,7 +64,7 @@ class GMW {
     public static function deployWhitelist() {
         $enabled = get_option('gmw-enabled');
         if($enabled == 'yes') {
-            add_filter( 'registration_errors', array(get_class(), 'GMW_check_fields'), 10, 3 );
+            add_filter( 'registration_errors', array(get_class(), 'GMW_check_fields'), 11, 3 );
         }
     } 
 
@@ -73,25 +73,28 @@ class GMW {
 
         $table_name = $wpdb->prefix . GMW_DB_NAME; 
         $rules = $wpdb->get_results("SELECT expression FROM $table_name", ARRAY_A);
-
+        $nomatch = true;
+        
         if(!empty($rules)) {
             foreach($rules as $rule) {
                 $exp = trim($rule['expression']);
 
-                if(substr($exp, 0, 1) == '/' && substr($exp, -1, 1)) {
+                if(substr($exp, 0, 1) == '/' && substr($exp, -1, 1) == '/') {
                     $match_flag = preg_match($exp, $user_email, $matches);
 
-                    if($match_flag == 0 || $match_flag == FALSE) {
-                        $errors->add( 'demo_error', '<strong>ERROR</strong>: Sorry! Your Email is not valid or filtered.');
-                        return $errors;
+                    if($match_flag) {
+                        $nomatch = false;
                     }
                 } else {
-                    if($user_email !== $exp) {
-                        $errors->add( 'demo_error', '<strong>ERROR</strong>: Sorry! Your Email is not valid or filtered.');
-                        return $errors;
+                    if($user_email == $exp) {
+                        $nomatch = false;
                     }
                 }
             }
+        }
+
+        if($nomatch) {
+            $errors->add( 'demo_error', '<strong>ERROR</strong>: Sorry! Your Email is not valid or filtered.');
         }
 
         return $errors;

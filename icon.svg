@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>App Icon 60 x 60</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFDFDF" offset="0%"></stop>
+            <stop stop-color="#FF9C9C" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0.25,21.5 L31.75,21.5 L31.75,18 L0.25,18 L0.25,21.5 Z M0.25,12.75 L31.75,12.75 L31.75,9.25 L0.25,9.25 L0.25,12.75 Z M0.25,0.5 L0.25,4 L31.75,4 L31.75,0.5 L0.25,0.5 Z" id="path-2"></path>
+        <polygon id="path-4" points="10.4808075 20.515095 2.65538811 12.4330973 0 15.1755498 10.4808075 26 33 2.74245248 30.3446119 0"></polygon>
+        <filter x="-21.2%" y="-19.2%" width="142.4%" height="153.8%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="App-Icon-60-x-60" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M17.3062251,-6.99192208e-16 L42.6937749,6.99192208e-16 C48.7115264,-4.06250808e-16 50.8937085,0.626572875 53.0937085,1.80314575 C55.2937085,2.97971863 57.0202814,4.7062915 58.1968542,6.9062915 C59.3734271,9.1062915 60,11.2884736 60,17.3062251 L60,42.6937749 C60,48.7115264 59.3734271,50.8937085 58.1968542,53.0937085 C57.0202814,55.2937085 55.2937085,57.0202814 53.0937085,58.1968542 C50.8937085,59.3734271 48.7115264,60 42.6937749,60 L17.3062251,60 C11.2884736,60 9.1062915,59.3734271 6.9062915,58.1968542 C4.7062915,57.0202814 2.97971863,55.2937085 1.80314575,53.0937085 C0.626572875,50.8937085 2.70833872e-16,48.7115264 -4.66128138e-16,42.6937749 L4.66128138e-16,17.3062251 C-2.70833872e-16,11.2884736 0.626572875,9.1062915 1.80314575,6.9062915 C2.97971863,4.7062915 4.7062915,2.97971863 6.9062915,1.80314575 C9.1062915,0.626572875 11.2884736,4.06250808e-16 17.3062251,-6.99192208e-16 Z" id="App-Icon" fill="url(#linearGradient-1)"></path>
+        <g id="Icon-/-Menu-/-Filled" transform="translate(14.000000, 19.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <g id="Mask" fill-rule="nonzero"></g>
+            <g id="↳-Icon-Color" mask="url(#mask-3)" fill="#000000" fill-opacity="0.54">
+                <g transform="translate(-5.000000, -10.000000)" id="Rectangle">
+                    <rect x="0" y="0" width="42" height="42"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="Icon-/-Done-/-Filled" transform="translate(21.000000, 21.000000)">
+            <mask id="mask-5" fill="white">
+                <use xlink:href="#path-4"></use>
+            </mask>
+            <g id="Mask" fill-rule="nonzero">
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"></use>
+                <use fill="#66E009" xlink:href="#path-4"></use>
+            </g>
+            <g id="↳-Icon-Color" mask="url(#mask-5)" fill="#000000" fill-opacity="0">
+                <g transform="translate(-7.000000, -26.000000)" id="Rectangle">
+                    <rect x="0" y="0" width="62" height="62"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
