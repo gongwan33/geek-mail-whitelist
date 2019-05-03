@@ -11,6 +11,14 @@ class GMW {
         self::deployWhitelist();
     }
 
+    public static function check_database_exists($name) {
+        global $wpdb;
+        $tname = $wpdb->prefix . $name;
+        $sql = $wpdb->prepare("SELECT COUNT(1) FROM information_schema.tables WHERE table_schema=%s AND table_name=%s", array($wpdb->dbname, $tname));
+
+        return (int)$wpdb->get_var($sql);
+    }
+
     public static function install() {
         global $wpdb;
         $table_name = $wpdb->prefix . GMW_DB_NAME; 

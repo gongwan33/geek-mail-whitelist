@@ -8,12 +8,14 @@ class GMWActions {
     }
 
     public static function ajaxEnableRule() {
+        //ajax nonce check
         check_ajax_referer( 'gmw_ajax' );
         self::enableRule();
         wp_die(); // All ajax handlers die when finished
     }
 
     public static function ajaxDelRule() {
+        //ajax nonce check
         check_ajax_referer( 'gmw_ajax' );
         self::delRule();
         wp_die(); // All ajax handlers die when finished
@@ -42,6 +44,7 @@ class GMWActions {
     }
 
     public static function addRule() {
+        //nonce check for form post request
         if ( ! isset( $_POST['gmw-form-nonce'] ) 
             || ! wp_verify_nonce( $_POST['gmw-form-nonce'], 'gmw_form' ) 
         ) {

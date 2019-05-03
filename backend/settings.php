@@ -24,6 +24,7 @@ if($GMW_enabled === 'no') {
     $GMW_enable_btn_str = 'Error Status';
 }
 
+//Nonce for ajax request
 $gmw_ajax_nonce = wp_create_nonce('gmw_ajax');
 
 ?>
@@ -45,6 +46,7 @@ $gmw_ajax_nonce = wp_create_nonce('gmw_ajax');
 <br/>
 <div>
     <input type="text" name="gmw-bl-rule" placeholder="One rule at a time" style="width: 500px"/>
+    <!--nonce for form post request-->
     <?php wp_nonce_field( 'gmw_form', 'gmw-form-nonce' ); ?>
     <input type="submit" value="Add"/>
     <?php if(!$add_res['res']):?>

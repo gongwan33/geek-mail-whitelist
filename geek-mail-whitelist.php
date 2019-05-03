@@ -31,5 +31,12 @@ require_once(GMW_PATH.'/backend/actions.php');
 register_activation_hook( __FILE__, array( 'GMW', 'install' ) );
 register_deactivation_hook( __FILE__, array( 'GMW', 'uninstall' ) );
 GMW::init();
+
+if(!GMW::check_database_exists(GMW_DB_NAME)) {
+    //install corrupted
+    //reinstall
+    GMW::install();
+}
+
 GMWActions::init();
 
