@@ -1,6 +1,12 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+if ( ! empty( $_POST )
+    && ! wp_verify_nonce( $_POST['gmw-form-nonce'], 'gmw_form' ) ) {
+    echo '<h2><strong>Bad Request.</strong></h2>';
+    wp_die();
+} 
+
 if(!GMW::isUserValid()) {
     echo "<h3>Only Administor can access this page.</h3>";
 }

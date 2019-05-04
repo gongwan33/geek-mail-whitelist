@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Geek Mail Whitelist
-  Plugin URI: https://geekblog.mybluemix.net/archives/611
+  Plugin URI: https://geekblog.mybluemix.net/archives/731
   Description: Allow users with certain emails to register
   Author: gongwan33
   Version: 1.0.0
